@@ -12,8 +12,8 @@ import java.util.List;
 
 public class ServerWindow extends JFrame {
     public static final int WIDTH = 400;
-    public static final int HEIGHT = 300;
-    public static final String LOG_PATH = "src/server/log.txt";
+    public static final int HEIGHT = 400;
+    public static final String LOG_PATH = "src/log.txt";
 
     List<Client> clientList;
 

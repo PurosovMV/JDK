@@ -25,7 +25,7 @@ public class Client extends JFrame {
         setSize(WIDTH, HEIGHT);
         setResizable(false);
         setTitle("Chat client");
-        setLocation(server.getX() - 500, server.getY());
+        setLocation(server.getX() - 450, server.getY());
 
         createPanel();
 
@@ -36,9 +36,12 @@ public class Client extends JFrame {
         appendLog(text);
     }
 
+    /**
+     * Подключение к серверу
+     */
     private void connectToServer() {
         if (server.connectUser(this)) {
-            appendLog("Вы успешно подключились!\n");
+            appendLog("Подключение выполнено успешно!\n");
             headerPanel.setVisible(false);
             connected = true;
             name = tfLogin.getText();
@@ -47,7 +50,7 @@ public class Client extends JFrame {
                 appendLog(log);
             }
         } else {
-            appendLog("Подключение не удалось");
+            appendLog("Ошибка подключения!");
         }
     }
 
