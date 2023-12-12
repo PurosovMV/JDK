@@ -24,7 +24,7 @@ public class Client extends JFrame {
 
         setSize(WIDTH, HEIGHT);
         setResizable(false);
-        setTitle("Chat client");
+        setTitle("Сlient");
         setLocation(server.getX() - 450, server.getY());
 
         createPanel();
@@ -54,6 +54,9 @@ public class Client extends JFrame {
         }
     }
 
+    /**
+     * Отключение от сервера
+     */
     public void disconnectFromServer() {
         if (connected) {
             headerPanel.setVisible(true);
@@ -89,10 +92,10 @@ public class Client extends JFrame {
     private Component createHeaderPanel() {
         headerPanel = new JPanel(new GridLayout(2, 3));
         tfIPAddress = new JTextField("127.0.0.1");
-        tfPort = new JTextField("8189");
-        tfLogin = new JTextField("Ivan Ivanovich");
+        tfPort = new JTextField("8088");
+        tfLogin = new JTextField("Логинов Иван");
         password = new JPasswordField("123456");
-        btnLogin = new JButton("login");
+        btnLogin = new JButton("Авторизоваться");
         btnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -127,7 +130,7 @@ public class Client extends JFrame {
                 }
             }
         });
-        btnSend = new JButton("send");
+        btnSend = new JButton("Отправить");
         btnSend.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

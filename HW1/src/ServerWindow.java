@@ -27,7 +27,7 @@ public class ServerWindow extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(WIDTH, HEIGHT);
         setResizable(false);
-        setTitle("Chat server");
+        setTitle("Server");
         setLocationRelativeTo(null);
 
         createPanel();
@@ -106,8 +106,8 @@ public class ServerWindow extends JFrame {
 
     private Component createButtons() {
         JPanel panel = new JPanel(new GridLayout(1, 2));
-        btnStart = new JButton("Start");
-        btnStop = new JButton("Stop");
+        btnStart = new JButton("Старт");
+        btnStop = new JButton("Остановить");
 
         btnStart.addActionListener(new ActionListener() {
             @Override
